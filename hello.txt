@@ -1,0 +1,25 @@
+
+import requests
+import telebot
+
+TOKEN = '870672383:AAE9d8p3SRMrMV3L15RwRzYZwVDThCLPS4g'
+MAIN_URL = f'https://api.telegram.org/bot{TOKEN}'
+bot = telebot.TeleBot(TOKEN)
+
+
+
+def main():
+    textMess = {
+        'chat_id' : '442523573',
+        'text' : 'hello, human!! again)',
+        'reply_to_message_id' : '3'
+    }
+    g = requests.get(f'{MAIN_URL}/getUpdates')
+    p = requests.post(f'{MAIN_URL}/sendMessage', data=textMess)
+
+    print(g.json())
+
+if __name__ == '__main__' :
+    main()
+
+
