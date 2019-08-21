@@ -1,5 +1,12 @@
+
+import datetime
+
+import calendar
+from telegramcalendar import create_calendar
 import telebot
 from telebot import types
+
+
 
 TOKEN = '870672383:AAE9d8p3SRMrMV3L15RwRzYZwVDThCLPS4g'
 bot = telebot.TeleBot(TOKEN)
@@ -21,7 +28,21 @@ def switch(message):
     switch_button = types.InlineKeyboardButton(text='Try', switch_inline_query="Telegram")
     markup.add(switch_button)
     bot.send_message(message.chat.id, "Выбрать чат", reply_markup = markup)
+    print(markup)
 
+@bot.message_handler(commands=['calendar'])
+def get_calendar(message):
+    now = datetime.datetime.now() #Текущая дата
+    chat_id = message.chat.id
+    date = (now.year, now.month)
+    #current_shown_dates = {}
+    #current_shown_dates[chat_id] = date #Сохраним текущую дату в словарь
+    markup = types.InlineKeyboardMarkup()
+    row_set = create_calendar(now.year,now.month)
+
+    for i in row_set:
+        markup.row(*i)
+    bot.send_message(message.chat.id, "Пожалйста, выберите дату", reply_markup=markup)
 
 
 @bot.message_handler(func=lambda message: True)
