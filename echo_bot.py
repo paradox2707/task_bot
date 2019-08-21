@@ -47,7 +47,7 @@ def get_calendar(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-	bot.reply_to(message, "Катя, я тебе кохаю! ♥")
+	bot.reply_to(message, "Спробуй команди /start /help /url /switch /calendar")
 	print(message)
 
 
