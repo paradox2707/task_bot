@@ -2,18 +2,35 @@
 import datetime
 
 import calendar
+from xml.dom.xmlbuilder import _name_xform
+
 from telegramcalendar import create_calendar
 import telebot
 from telebot import types
+from ORMClass_STBot import *
 
 
 
 TOKEN = '870672383:AAE9d8p3SRMrMV3L15RwRzYZwVDThCLPS4g'
 bot = telebot.TeleBot(TOKEN)
 
+
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.send_message(message.chat.id, f"Hi, {message.chat.first_name}")
+    bot.send_message(message.chat.id, f"Hi, {message.chat.first_name}")
+
+    n_book = Book()
+    n_book.title = 'book5'
+    n_book.add()
+
+    # n_book.author = 'andrii'
+    # n_book.pages = 27
+    # n_book.published = datetime.datetime.now()
+    # n_book.id = 1
+
+
+
+
 
 @bot.message_handler(commands = ['url'])
 def url(message):
@@ -60,3 +77,4 @@ def echo_all(message):
 # 	bot.reply_to(message, "Really?")
 
 bot.polling()
+
