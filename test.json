@@ -338,3 +338,375 @@
   }
 }
 
+{
+  'content_type': 'text',
+  'message_id': 549,
+  'from_user': {
+    'id': 442523573,
+    'is_bot': False,
+    'first_name': 'Andrii',
+    'username': 'paradox27',
+    'last_name': 'Slyzhuk',
+    'language_code': 'uk'
+  },
+  'date': 1570369732,
+  'chat': {
+    'type': 'group',
+    'last_name': None,
+    'first_name': None,
+    'username': None,
+    'id': -276686376,
+    'title': '(КВАС) Purchase - закупки',
+    'all_members_are_administrators': True,
+    'photo': None,
+    'description': None,
+    'invite_link': None,
+    'pinned_message': None,
+    'sticker_set_name': None,
+    'can_set_sticker_set': None
+  },
+  'forward_from_chat': None,
+  'forward_from': None,
+  'forward_date': None,
+  'reply_to_message': None,
+  'edit_date': None,
+  'media_group_id': None,
+  'author_signature': None,
+  'text': 'тут чи в нашому приватному?',
+  'entities': None,
+  'caption_entities': None,
+  'audio': None,
+  'document': None,
+  'photo': None,
+  'sticker': None,
+  'video': None,
+  'video_note': None,
+  'voice': None,
+  'caption': None,
+  'contact': None,
+  'location': None,
+  'venue': None,
+  'new_chat_member': None,
+  'new_chat_members': None,
+  'left_chat_member': None,
+  'new_chat_title': None,
+  'new_chat_photo': None,
+  'delete_chat_photo': None,
+  'group_chat_created': None,
+  'supergroup_chat_created': None,
+  'channel_chat_created': None,
+  'migrate_to_chat_id': None,
+  'migrate_from_chat_id': None,
+  'pinned_message': None,
+  'invoice': None,
+  'successful_payment': None,
+  'connected_website': None,
+  'json': {
+    'message_id': 549,
+    'from': {
+      'id': 442523573,
+      'is_bot': False,
+      'first_name': 'Andrii',
+      'last_name': 'Slyzhuk',
+      'username': 'paradox27',
+      'language_code': 'uk'
+    },
+    'chat': {
+      'id': -276686376,
+      'title': '(КВАС) Purchase - закупки',
+      'type': 'group',
+      'all_members_are_administrators': True
+    },
+    'date': 1570369732,
+    'text': 'тут чи в нашому приватному?'
+  }
+}
+
+
+{
+  'content_type': 'text',
+  'message_id': 575,
+  'from_user': {
+    'id': 870672383,
+    'is_bot': True,
+    'first_name': 'TaskManager',
+    'username': 'TaskManager_SmartBot',
+    'last_name': None,
+    'language_code': None
+  },
+  'date': 1570382262,
+  'chat': {
+    'type': 'group',
+    'last_name': None,
+    'first_name': None,
+    'username': None,
+    'id': -276686376,
+    'title': '(КВАС) Purchase - закупки',
+    'all_members_are_administrators': True,
+    'photo': None,
+    'description': None,
+    'invite_link': None,
+    'pinned_message': None,
+    'sticker_set_name': None,
+    'can_set_sticker_set': None
+  },
+  'forward_from_chat': None,
+  'forward_from': None,
+  'forward_date': None,
+  'reply_to_message': None,
+  'edit_date': None,
+  'media_group_id': None,
+  'author_signature': None,
+  'text': 'Пожалйста, выберите дату',
+  'entities': None,
+  'caption_entities': None,
+  'audio': None,
+  'document': None,
+  'photo': None,
+  'sticker': None,
+  'video': None,
+  'video_note': None,
+  'voice': None,
+  'caption': None,
+  'contact': None,
+  'location': None,
+  'venue': None,
+  'new_chat_member': None,
+  'new_chat_members': None,
+  'left_chat_member': None,
+  'new_chat_title': None,
+  'new_chat_photo': None,
+  'delete_chat_photo': None,
+  'group_chat_created': None,
+  'supergroup_chat_created': None,
+  'channel_chat_created': None,
+  'migrate_to_chat_id': None,
+  'migrate_from_chat_id': None,
+  'pinned_message': None,
+  'invoice': None,
+  'successful_payment': None,
+  'connected_website': None,
+  'json': {
+    'message_id': 575,
+    'from': {
+      'id': 870672383,
+      'is_bot': True,
+      'first_name': 'TaskManager',
+      'username': 'TaskManager_SmartBot'
+    },
+    'chat': {
+      'id': -276686376,
+      'title': '(КВАС) Purchase - закупки',
+      'type': 'group',
+      'all_members_are_administrators': True
+    },
+    'date': 1570382262,
+    'text': 'Пожалйста, выберите дату',
+    'reply_markup': {
+      'inline_keyboard': [
+        [
+          {
+            'text': 'October 2019',
+            'callback_data': 'IGNORE;2019;10;0'
+          }
+        ],
+        [
+          {
+            'text': 'Mo',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'Tu',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'We',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'Th',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'Fr',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'Sa',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': 'Su',
+            'callback_data': 'IGNORE;2019;10;0'
+          }
+        ],
+        [
+          {
+            'text': ' ',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': '1',
+            'callback_data': 'DAY;2019;10;1'
+          },
+          {
+            'text': '2',
+            'callback_data': 'DAY;2019;10;2'
+          },
+          {
+            'text': '3',
+            'callback_data': 'DAY;2019;10;3'
+          },
+          {
+            'text': '4',
+            'callback_data': 'DAY;2019;10;4'
+          },
+          {
+            'text': '5',
+            'callback_data': 'DAY;2019;10;5'
+          },
+          {
+            'text': '6',
+            'callback_data': 'DAY;2019;10;6'
+          }
+        ],
+        [
+          {
+            'text': '7',
+            'callback_data': 'DAY;2019;10;7'
+          },
+          {
+            'text': '8',
+            'callback_data': 'DAY;2019;10;8'
+          },
+          {
+            'text': '9',
+            'callback_data': 'DAY;2019;10;9'
+          },
+          {
+            'text': '10',
+            'callback_data': 'DAY;2019;10;10'
+          },
+          {
+            'text': '11',
+            'callback_data': 'DAY;2019;10;11'
+          },
+          {
+            'text': '12',
+            'callback_data': 'DAY;2019;10;12'
+          },
+          {
+            'text': '13',
+            'callback_data': 'DAY;2019;10;13'
+          }
+        ],
+        [
+          {
+            'text': '14',
+            'callback_data': 'DAY;2019;10;14'
+          },
+          {
+            'text': '15',
+            'callback_data': 'DAY;2019;10;15'
+          },
+          {
+            'text': '16',
+            'callback_data': 'DAY;2019;10;16'
+          },
+          {
+            'text': '17',
+            'callback_data': 'DAY;2019;10;17'
+          },
+          {
+            'text': '18',
+            'callback_data': 'DAY;2019;10;18'
+          },
+          {
+            'text': '19',
+            'callback_data': 'DAY;2019;10;19'
+          },
+          {
+            'text': '20',
+            'callback_data': 'DAY;2019;10;20'
+          }
+        ],
+        [
+          {
+            'text': '21',
+            'callback_data': 'DAY;2019;10;21'
+          },
+          {
+            'text': '22',
+            'callback_data': 'DAY;2019;10;22'
+          },
+          {
+            'text': '23',
+            'callback_data': 'DAY;2019;10;23'
+          },
+          {
+            'text': '24',
+            'callback_data': 'DAY;2019;10;24'
+          },
+          {
+            'text': '25',
+            'callback_data': 'DAY;2019;10;25'
+          },
+          {
+            'text': '26',
+            'callback_data': 'DAY;2019;10;26'
+          },
+          {
+            'text': '27',
+            'callback_data': 'DAY;2019;10;27'
+          }
+        ],
+        [
+          {
+            'text': '28',
+            'callback_data': 'DAY;2019;10;28'
+          },
+          {
+            'text': '29',
+            'callback_data': 'DAY;2019;10;29'
+          },
+          {
+            'text': '30',
+            'callback_data': 'DAY;2019;10;30'
+          },
+          {
+            'text': '31',
+            'callback_data': 'DAY;2019;10;31'
+          },
+          {
+            'text': ' ',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': ' ',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': ' ',
+            'callback_data': 'IGNORE;2019;10;0'
+          }
+        ],
+        [
+          {
+            'text': '<',
+            'callback_data': 'PREV-MONTH;2019;10;0'
+          },
+          {
+            'text': ' ',
+            'callback_data': 'IGNORE;2019;10;0'
+          },
+          {
+            'text': '>',
+            'callback_data': 'NEXT-MONTH;2019;10;0'
+          }
+        ]
+      ]
+    }
+  }
+}
+
+

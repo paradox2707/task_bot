@@ -13,6 +13,8 @@ from ORMClass_STBot import *
 
 TOKEN = '870672383:AAE9d8p3SRMrMV3L15RwRzYZwVDThCLPS4g'
 bot = telebot.TeleBot(TOKEN)
+global_m_text = []
+
 
 def message_add(new_message):
     # add message
@@ -41,7 +43,9 @@ def message_add(new_message):
     # create_entities.type = new_message.entities.type
     # create_entities.add()
 
-
+@bot.inline_handler(lambda query: len(query.query) is 0)
+def empty_query(query):
+    hint = "Введите ровно 2 числа и получите результат!"
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -74,7 +78,8 @@ def switch(message):
     markup = types.InlineKeyboardMarkup()
     switch_button = types.InlineKeyboardButton(text='Try', switch_inline_query="Telegram")
     markup.add(switch_button)
-    bot.send_message(message.chat.id, "Выбрать чат", reply_markup = markup)
+    #bot.send_message(message.chat.id, "Выбрать чат", reply_markup = markup)
+    bot.send_message(message.chat.id, "Выбрать чат", reply_markup=markup)
     print(markup)
 
 @bot.message_handler(commands=['calendar'])
@@ -91,6 +96,24 @@ def get_calendar(message):
         markup.row(*i)
     bot.send_message(message.chat.id, "Пожалйста, выберите дату", reply_markup=markup)
 
+
+@bot.callback_query_handler(func=lambda call: True)
+def callback_inline(call):
+    bot.answer_callback_query(call.id, text="Дата выбрана")
+    print(call.data)
+    bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text=global_m_text[0])
+    global_m_text.clear()
+
+@bot.message_handler(func=lambda message: message.chat.type == 'group', regexp='@TaskManager_SmartBot')
+def echo_task(message):
+    global_m_text.append(message.text)
+    now = datetime.datetime.now() #Текущая дата
+    markup = types.InlineKeyboardMarkup()
+    row_set = create_calendar(now.year,now.month)
+
+    for i in row_set:
+        markup.row(*i)
+    bot.send_message(message.chat.id, "Пожалуйста, выберите дату", reply_markup=markup)
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
