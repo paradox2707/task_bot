@@ -8,6 +8,7 @@ from telegramcalendar import create_calendar
 import telebot
 from telebot import types
 from ORMClass_STBot import *
+import re
 
 
 
@@ -101,7 +102,16 @@ def get_calendar(message):
 def callback_inline(call):
     bot.answer_callback_query(call.id, text="Дата выбрана")
     print(call.data)
-    bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text=global_m_text[0])
+    text_calback = global_m_text[0]
+    text_calback = re.sub('@TaskManager_SmartBot', '', text_calback)
+    performer = 'Performer:'
+    for word in text_calback.split():
+        if word[0] == '@':
+            performer = performer + ' ' + word
+            text_calback = re.sub(word, '', text_calback)
+    deadline = call.data.split(';')
+    text_calback = text_calback + '\n' + performer + '\n' + 'Deadline: ' + deadline[3] + '.' + deadline[2] + '.' + deadline[1]
+    bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text=text_calback)
     global_m_text.clear()
 
 @bot.message_handler(func=lambda message: message.chat.type == 'group', regexp='@TaskManager_SmartBot')
